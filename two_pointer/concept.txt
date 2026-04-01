@@ -1,0 +1,7 @@
+Two pointers
+    - converrging pointer 
+    - parallel pointer
+    - trigger based pointer
+    - 
+
+used to the array's, Strings, linked list
