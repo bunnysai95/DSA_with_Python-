@@ -1,0 +1,64 @@
+sliding_window 
+    - fixed sliding window (used when winodw_size is already known before)
+    - dynamic sliding winodw.(winodw_size is not fixed)
+
+fixed sliding window
+def fixed_sliding_window(arr, k):
+    n = len(arr)
+
+    # Edge case
+    if n < k:
+        return None  # or appropriate value
+
+    # Step 1: Initialize window sum
+    window_sum = 0
+
+    # Step 2: Build initial window [0 → k-1]
+    for i in range(k):
+        window_sum += arr[i]
+
+    # Step 3: Initialize result
+    result = window_sum  # max / min / count / etc.
+
+    # Step 4: Slide window
+    for i in range(k, n):
+        # Add next element, remove previous
+        window_sum += arr[i] - arr[i - k]
+
+        # Step 5: Update result
+        result = max(result, window_sum)   # change logic as needed
+
+    return result
+
+Dynamic sliding window:
+def dynamic_sliding_window(arr):
+    n = len(arr)
+
+    # Step 1: Initialize pointers
+    left = 0
+
+    # Step 2: Initialize window state
+    window_state = 0        # sum / count / hashmap / set / etc.
+
+    # Step 3: Initialize result
+    result = float('inf')   # or 0 / -inf depending on problem
+
+    # Step 4: Expand window
+    for right in range(n):
+
+        # Include current element
+        window_state += arr[right]   # customize this
+
+        # Step 5: Shrink window (IMPORTANT LOOP)
+        while condition(window_state):   # define violation / validity
+
+            # Step 6: Update result
+            result = min(result, right - left + 1)   # or max / count
+
+            # Remove left element
+            window_state -= arr[left]   # customize this
+
+            left += 1   # shrink window
+
+    return result
+
