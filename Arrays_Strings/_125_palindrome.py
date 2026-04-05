@@ -13,3 +13,23 @@ def is_palindrome(s):
     return cleaned_s == cleaned_s[::-1]
 result = is_palindrome(Palindrome)
 print(result)
+
+s = "A man, a plan, a canal: Panama"
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s_lowered = s.lower()
+        i , j = 0 , len(s_lowered) - 1
+        while i < j :
+            while i < j and not s_lowered[i].isalnum():
+                i +=1
+            while i < j and not s_lowered[j].isalnum():
+                j -=1
+            if s_lowered[i] == s_lowered[j]:
+                i +=1
+                j -=1
+            else: 
+                return False 
+        return True 
+solution = Solution()
+result = solution.isPalindrome(s)
+print(result)
