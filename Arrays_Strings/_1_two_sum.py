@@ -26,7 +26,7 @@ from ast import List
 from typing import List
 nums = [2,7,11,15]   
 target = 9
-def twoSum(self, nums: List[int], target: int) -> List[int]:
+def twoSum(self, nums: List[int], target: int) -> List[int] | None:
     empty = {}
     for i, num in enumerate(nums):
         _list_1 = target - num 
