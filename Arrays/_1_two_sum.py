@@ -35,3 +35,8 @@ def twoSum(self, nums: List[int], target: int) -> List[int] | None:
         empty[num] = i 
 
 print(twoSum(1, nums, target))
+
+
+'''
+storing indexing in hashset
+and then checking if the target - num is in the hashset or not'''

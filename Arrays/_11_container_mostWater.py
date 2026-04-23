@@ -17,3 +17,8 @@ s = Solution()
 height = [1,8,6,2,5,4,8,3,7]
 result = s.maxArea(height)
 print(result)   
+
+'''
+two pointer approch 
+min heigh between 2 pointers * distance between 2 pointers
+move pointer inwards '''

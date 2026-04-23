@@ -7,7 +7,7 @@ strs = ["flower","flow","flight"]
 from typing import List
 def longestCommonPrefix(strs: List[str]) -> str:
     if not strs:
-        return ""
+        return "" 
     prefix  = strs[0] 
     for s in strs[1:]:
         while not s.startswith(prefix):

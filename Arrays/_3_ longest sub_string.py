@@ -11,9 +11,12 @@ for i in range(len(s)):
         if s[j] in _seen:
             break
         _seen.add(s[j])
-        max_len = max(max_len, j-i +1)
+        max_len = max(max_len, j-i +1) # length of the substring is j-i+1 because 
+        # we are starting from i and j is the current index we are checking
     
 print(max_len)
+
+
 
 # obtimized soultion o(n)
 left = 0 
