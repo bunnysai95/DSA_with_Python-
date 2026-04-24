@@ -25,3 +25,19 @@ nums = [-1,0,1,2,-1,-4]
 result = solution.threeSum(nums)
 print(result)
 # [[-1, -1, 2], [-1, 0, 1]]
+
+# core logic
+nums = [-1,0,1,2,-1,-4]
+nums.sort()
+new_list = []
+for i in range(len(nums)):
+    left = i+1 
+    right = len(nums)-1
+    while left < right:
+        if nums[i]+nums[left]+nums[right] == 0 :
+            new_list.append([nums[i],nums[left],nums[right]])
+        left+=1 
+        right-=1
+print(new_list)
+
+'''two pointer approch'''

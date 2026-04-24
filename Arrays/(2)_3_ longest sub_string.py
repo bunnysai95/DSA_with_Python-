@@ -13,8 +13,9 @@ for i in range(len(s)):
         _seen.add(s[j])
         max_len = max(max_len, j-i +1) # length of the substring is j-i+1 because 
         # we are starting from i and j is the current index we are checking
-    
 print(max_len)
+
+'''two pointer '''
 
 
 
@@ -29,3 +30,7 @@ for right, char in enumerate(s):
     seen.add(char)
     max_length = max(max_length,right-left+1)
 print(max_length)
+
+''' two pointer approch  
+right with loop , and left is for removing 
+when char in seen  removing fromseen and couting '''
