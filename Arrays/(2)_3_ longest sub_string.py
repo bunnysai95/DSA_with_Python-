@@ -18,7 +18,6 @@ print(max_len)
 '''two pointer '''
 
 
-
 # obtimized soultion o(n)
 left = 0 
 seen = set()
