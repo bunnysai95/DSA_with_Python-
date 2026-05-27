@@ -10,3 +10,7 @@ else:
 
 # optimzed solution
 print(sorted(s) == sorted(t))
+
+"""
+checking given string in other string 
+then printing the result"""

@@ -147,6 +147,9 @@ from sqlalchemy.orm import sessionmaker, Session
 from pydantic import BaseModel
 from typing import Optional, List
 
+# mcp creation 
+from fastapi_mcp import FastApiMCP
+
 
 # ---------------- DATABASE SETUP ----------------
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"
@@ -261,4 +264,11 @@ def delete_item(item_id: int, db: Session = Depends(get_db)):
     
     db.delete(db_item)
     db.commit()
-    return {"message": "Item deleted successfully"}
+    return {"message": "Item deleted successfully"}         
+
+mcp = FastApiMCP(
+    app,
+    name="Items CRUD MCP",
+    description="MCP server exposing Items CRUD operations",
+)
+mcp.mount()
