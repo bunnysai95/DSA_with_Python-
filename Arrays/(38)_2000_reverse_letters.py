@@ -1,4 +1,8 @@
 # 2000. Reverse Prefix of Word
+# Input: word = "abcdefd", ch = "d"
+# Output: "dcbaefd"
+# Explanation: The first occurrence of "d" is at index 3.
+# Reverse the part of word from 0 to 3 (inclusive), the resulting string is "dcbaefd".
 class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
         s = list(word)

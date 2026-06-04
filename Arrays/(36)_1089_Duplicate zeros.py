@@ -1,3 +1,7 @@
+'''Input: arr = [1,0,2,3,0,4,5,0]
+Output: [1,0,0,2,3,0,0,4]
+Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]'''
+
 from typing import List
 class Solution:
     def duplicateZeros(self, arr: List[int]) -> None:
@@ -19,6 +23,10 @@ solution = Solution()
 solution.duplicateZeros(arr)
 print(arr)
 
-
+'''
+loop all the list 
+- check if == 0 | then loop from right(last j point to inwards) 
+backwards till current(i) value assigne value to current j value  
+'''
 
         

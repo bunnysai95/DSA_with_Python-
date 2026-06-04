@@ -1,3 +1,8 @@
+# 2824. Count Pairs Whose Sum is Less than Target
+# nums = [-1,1,2,3,1], target = 2
+# Output: 3
+# find pairs 
+
 from typing import List
 class Solution:
     def countPairs(self, nums: List[int], target: int) -> int:

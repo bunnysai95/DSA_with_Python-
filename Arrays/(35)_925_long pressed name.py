@@ -1,3 +1,9 @@
+'''
+Long Pressed Name
+Input: name = "alex", typed = "aaleex"
+Output: true
+Explanation: 'a' and 'e' in 'alex' were long pressed.
+'''
 class Solution:
     def isLongPressedName(self, name: str, typed: str) -> bool:
         i = 0 
