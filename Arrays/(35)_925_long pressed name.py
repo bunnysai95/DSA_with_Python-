@@ -20,3 +20,8 @@ typed = "aaleex"
 solution = Solution()
 result = solution.isLongPressedName(name, typed)
 print(result)
+
+''' 
+check name is in typed, using 2 pointer return if final i value is len(name) 
+return boolen 
+'''
