@@ -16,3 +16,7 @@ print(result)
 linear search
 log(n), o(1)
 '''
+
+
+
+
